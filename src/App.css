@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0,  .15);
+    
+}
+.App-header > h1 {
+    font-family: 'Caveat';
+    font-weight: 700;
+    font-size: 4rem;
+    color: #0e3c7e;
+}
+.App-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.App-wrapper > div > h2 {
+    font-family: 'Caveat';
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+button {
+    background-color: #0e3c7e;
+    color: #ffffff;
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    border: 0;
+    border-radius: 5px;;
+}
+button:last-child {
+    margin-right: 0;;
+}
+button:active {
+    background-color: #1e60a9;
 }
 
-.App-link {
-  color: #61dafb;
+/* AD DESIGNER STYLES */
+.display-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border: 3px solid #222222;
+    color: #000000;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+}
+.display-ad-dark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 200px;
+    height: 200px;
+    border: 3px solid #ffffff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .1);
+    color: #ffffff;
+    background-color: #222222;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-ad__flavor {
+    font-family: 'Caveat';
+    font-weight: 400;;
+}
+.select-font-size__options {
+    display: flex;
+    align-items: center;
+}
+.select-font-size__options > p {
+    margin: 0 1em 0 0;
+    padding: 0;
+    text-align: center;
+}
+.selected-button, 
+.themeButton[disabled] {
+    background-color: gray;
+}
+
+/* VOTE STYLES */
+.flavor-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.flavor-stats__votes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flavor-stats > p {
+    padding: 0 1em;
+    text-align: center;
+}
+.vote-total {
+    padding: 0 1em;
+}
+.bar {
+    border-radius: 5px;
+    height: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+    .App-wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
